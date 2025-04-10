@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detector</title>
+<!--    <link rel="stylesheet" href="front.css">-->
+<style>
+      body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Background Image */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-image: url('https://i.pinimg.com/736x/0d/66/78/0d66787c9c666194c5fe292b1ebc810a.jpg'); /* Add your image path */
+            background-size: cover;
+            background-position: center;
+            filter: blur(2px); /* Apply blur effect */
+            z-index: -1; /* Send to background */
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+            color: white; /* Adjust text color based on image */
+        }
+        .spacer {
+            height: 150vh; /* This ensures there's enough content to allow scrolling */
+        }
+        @media only screen and (max-width: 830px) {
+            .laptop {
+                display: none;
+            }
+        }
+
+        @media (min-width: 830px) and (max-width: 1536px) {
+            .mobile {
+                display: none;
+            }
+        }
+<!--      -------------------- Fruit Gallery----------------------------->
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8e4; /* Light yellowish background */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+
+        }
+
+        .card {
+            width: 200px;
+            background: #f2e2b8;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-bottom: 2px solid #eee;
+        }
+
+        .card p {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            background: #f2e2b8;
+        }
+
+
+  .col {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+   <nav style="background-color: rgba(4, 54, 4, 0.7); width: 100vw; padding: 2px 0; position: fixed; top: 0; z-index: 999; left: 0;position: absolute;">
+    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; padding: 0 10px;">
+        <h2 style="color: beige; font-family: Arial, sans-serif;">🌿 LeafScan</h2>
+        <div>
+            <a href="/" style="color: beige; margin-right: 20px; text-decoration: none;">Home</a>
+            <a href="/index" style="color: beige; margin-right: 20px; text-decoration: none;">Leaf AI</a>
+            <a href="/contact" style="color: beige; text-decoration: none;">Contact</a>
+        </div>
+    </div>
+</nav>
+    <!-- Blurred Background -->
+    <div class="background"></div>
+    <!-- Content -->
+    <div class="row mb-5 text-center text-white laptop">
+        <div class="col-lg-10 mx-auto ">
+            <br>
+            <br>
+            <h1 class="display-4" style="padding-top: 2%; font-weight: 400;color:white; font-size: 45px; ">
+                <b>🌱LeafScan 🌱</b> </h1>
+
+                <b class="lead" style="font-weight: 500; font-size: 20px;color: white;">Plant Disease Detection For Agriculture </b>
+            <p class="lead" style="font-weight: 500;color: white;">This AI Engine Will Help To Detect Disease From Following Fruites And Veggies</p>
+        </div>
+    </div>
+    <div class="laptop">
+        <br>
+        <br>
+        <br>
+    <a href="/index">
+        <button class = "bttn-pill bttn-lg btn-success" style="height: 65px; width: 200px;  border-radius: 40px; background-color: white; cursor: pointer; "><b style="color: #043610; font-size:25px; font-family:Josefin Sans ">LeafScan</b></button>
+    </a>
+        <br>
+        <br>
+    </div>
+<br>
+    <h1>Grow Safe, Grow Smart</h1>
+    <br>
+    <div class="gallery laptop ">
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/1b/f7/19/1bf71926742371897a16d5c053673909.jpg" alt="Apple1">
+            <p>Use Soil That Drains Well</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/71/b9/94/71b994f9e3e64074f9fa6ab917592c04.jpg" alt="Blueberry">
+            <p>Water the Roots, Not the Leaves</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/fc/aa/95/fcaa958ca5d2041e0ae462a8e2114814.jpg" alt="Cherry">
+            <p>Don't Plant Too Close Together</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/ad/cf/4b/adcf4bcf9e6a3ec5841c44852ea2501f.jpg" alt="Corn">
+            <p>Give the Right Amount of Light</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/57/c5/64/57c5644dd4990d183e3b7260c57fb667.jpg" alt="Orange">
+            <p>Watch for Bugs Early</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/e6/bf/b1/e6bfb13fdacfef8e3ea25389bf2374c9.jpg" alt="Tomato">
+            <p>Follow Local Farming Advice</p>
+        </div>
+    </div>
+    <br>
+
+</body>
+</html>

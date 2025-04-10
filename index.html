@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+AI Engine
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="container">
+    <!-- 🌿 Heading Section -->
+    <div class="row mb-5 text-center">
+        <div class="col-lg-10 mx-auto">
+            <h1 class="display-4" style="padding-top: 2%; font-weight: 400; font-family:blue angle; color: rgb(4, 54, 4);">
+                <b>🍀 Leaf AI 🍀</b>
+            </h1>
+            <p class="lead" style="font-weight: 500; color: black; font-family:blue angle;">Catch Plant Problems Before They Grow</p>
+        </div>
+    </div>
+
+    <!-- 🖼️ Upload Section -->
+    <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-6 mb-4">
+            <div class="p-5 shadow rounded-lg" style="
+                background: #f4fef1;
+                color: #234207;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(20px);
+                border-radius: 15px;
+                transition: transform 0.3s ease-in-out;
+            ">
+                <img
+                    src="https://i.pinimg.com/736x/fd/55/cc/fd55ccbdd74bd089137e1e739976e433.jpg"
+                    height="195"
+                    width="150"
+                    class="d-block mx-auto mb-4"
+                    alt="Leaf AI Logo"
+                />
+
+                <!-- Upload Form -->
+                <form action="/submit" method="POST" enctype="multipart/form-data">
+                    <div class="custom-file overflow-hidden mb-4 text-center">
+                        <input type="file" id="actual-btn" hidden name="image" />
+                        <label for="actual-btn" class="btn btn-sm btn-outline-dark">Choose File</label>
+                        <br>
+                        <span id="file-chosen" class="mt-2 d-block">No file chosen</span>
+                    </div>
+
+                    <h6 class="text-center mb-4 text-muted">
+                        Simply upload your plant's leaf image and see the disease.
+                    </h6>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-outline-success">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS: Show selected file name -->
+<script>
+    const actualBtn = document.getElementById('actual-btn');
+    const fileChosen = document.getElementById('file-chosen');
+
+    actualBtn.addEventListener('change', function () {
+        fileChosen.textContent = this.files[0] ? this.files[0].name : "No file chosen";
+    });
+</script>
+{% endblock body %}
