@@ -34,11 +34,11 @@ LeafScan uses a **Convolutional Neural Network (CNN)** to classify plant disease
 
 ## 🛠️ Tech Stack
 
-- **Backend:** Python, Flask
-- **Model:** PyTorch (CNN)
-- **Frontend:** HTML, CSS, Bootstrap
-- **Data:** Pandas, CSV, Pillow
-- **Hosting:** Localhost / Flask Server
+- Backend:Python, Flask
+- Model:PyTorch (CNN)
+- Frontend:HTML, CSS, Bootstrap
+- Data: Pandas, CSV, Pillow
+- Hosting: Localhost / Flask Server
 
 ---
 
@@ -116,7 +116,7 @@ Special thanks to:
 
 ---
 
-**If you liked this project, don't forget to ⭐ the repository!**
+If you liked this project, don't forget to ⭐ the repository!
 ```
 
 ---
